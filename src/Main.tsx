@@ -1,7 +1,7 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {useLocalization} from 'shared/hooks/useLocalization/useLocalization';
-import {ELanguages} from 'shared/enums';
+import {ELanguages} from 'shared/enums/localization.enums';
 
 const Main = () => {
   const{changeLanguage,translate} = useLocalization()

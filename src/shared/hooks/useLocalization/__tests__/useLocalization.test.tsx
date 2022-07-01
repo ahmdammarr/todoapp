@@ -3,7 +3,7 @@ import 'react-native';
 import React from 'react';
 import { useLocalization } from '../useLocalization';
 import { render } from '@testing-library/react-native';
-import { ELanguages } from 'shared/enums';
+import { ELanguages } from 'shared/enums/localization.enums';
 
 
 

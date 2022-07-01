@@ -1,10 +1,11 @@
-import React from "react";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Main } from "Main";
-import { ERootNavigationRoutes } from "shared/enums";
+import React from 'react';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {EBottomTabRoutes} from 'shared/models/enums/navigation.enums';
+import {TBottomTabNavigator} from 'shared/models/types/navigation.types/TBottomTabNavigator.type';
+import { Todos } from 'features/todos/screens';
+import { Settings } from 'features/settings/screens';
 
-
-const BottomTab = createBottomTabNavigator();
+const BottomTab = createBottomTabNavigator<TBottomTabNavigator>();
 
 export const BottomTabNavigator = () => {
   const screenOptions = {
@@ -14,10 +15,8 @@ export const BottomTabNavigator = () => {
 
   return (
     <BottomTab.Navigator screenOptions={screenOptions}>
-      <BottomTab.Screen
-        name={ERootNavigationRoutes.splash}
-        component={Main}
-      />
+      <BottomTab.Screen name={EBottomTabRoutes.todos} component={Todos} />
+      <BottomTab.Screen name={EBottomTabRoutes.settings} component={Settings} />
     </BottomTab.Navigator>
   );
 };
