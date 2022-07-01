@@ -40,5 +40,10 @@ jest.mock('react-native-gesture-handler', () => {
 
 
 jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper')
+jest.mock('@react-navigation/native/lib/commonjs/useLinking.native', () => ({
+  default: () => ({getInitialState: {then: () => null}}),
+  __esModule: true,
+}))
+
 
 jest.mock('@react-native-async-storage/async-storage', () => mockAsyncStorage);

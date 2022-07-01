@@ -1,12 +1,9 @@
 import React from 'react';
-import {Main} from 'Main';
-import { useCachedResources } from 'shared/hooks/useCashedResources';
-import { ActivityIndicator } from 'react-native';
-import 'i18n'
+import 'i18n';
+import {RootContainer} from 'containers';
+
 const App = () => {
-  const {isLoading} = useCachedResources()
-  if(isLoading) return <ActivityIndicator/>
-  return <Main />;
+  return <RootContainer />;
 };
 
 export default App;
