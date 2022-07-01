@@ -9,7 +9,7 @@ module.exports = {
   clearMocks: true,
   moduleDirectories: ['node_modules', path.join(__dirname, 'src')],
   transformIgnorePatterns: [
-    "node_modules/(?!(react-native|@react-native)/)"
+    'node_modules/(?!(jest-)?@?react-native|@react-native-community|@react-navigation)',
   ],
   moduleNameMapper: {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':

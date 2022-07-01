@@ -2,8 +2,9 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {EBottomTabRoutes} from 'shared/models/enums/navigation.enums';
 import {TBottomTabNavigator} from 'shared/models/types/navigation.types/TBottomTabNavigator.type';
-import { Todos } from 'features/todos/screens';
-import { Settings } from 'features/settings/screens';
+import {Todos} from 'features/todos/screens';
+import {Settings} from 'features/settings/screens';
+import {Text} from 'react-native';
 
 const BottomTab = createBottomTabNavigator<TBottomTabNavigator>();
 
@@ -15,8 +16,20 @@ export const BottomTabNavigator = () => {
 
   return (
     <BottomTab.Navigator screenOptions={screenOptions}>
-      <BottomTab.Screen name={EBottomTabRoutes.todos} component={Todos} />
-      <BottomTab.Screen name={EBottomTabRoutes.settings} component={Settings} />
+      <BottomTab.Screen
+        options={{
+          tabBarIcon: () => <Text>{EBottomTabRoutes.todos}</Text>,
+        }}
+        name={EBottomTabRoutes.todos}
+        component={Todos}
+      />
+      <BottomTab.Screen
+        options={{
+          tabBarIcon: () => <Text testID='settings'>{EBottomTabRoutes.settings}</Text>,
+        }}
+        name={EBottomTabRoutes.settings}
+        component={Settings}
+      />
     </BottomTab.Navigator>
   );
 };

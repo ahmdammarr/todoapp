@@ -4,7 +4,7 @@ import React from 'react'
 export const Todos = () => {
   return (
     <View style={styles.container}>
-      <Text>Todos</Text>
+      <Text>TodosScreen</Text>
     </View>
   )
 }
