@@ -1,6 +1,6 @@
 import '@testing-library/jest-native/extend-expect'
 import {jest} from '@jest/globals'
-
+import mockAsyncStorage from '@react-native-async-storage/async-storage/jest/async-storage-mock';
 import Promise from 'promise-polyfill'
 global.Promise = Promise
 
@@ -41,3 +41,4 @@ jest.mock('react-native-gesture-handler', () => {
 
 jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper')
 
+jest.mock('@react-native-async-storage/async-storage', () => mockAsyncStorage);
