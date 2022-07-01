@@ -1,5 +1,6 @@
 import i18n from 'i18n-js';
-import {ELanguages, EStorageKeys} from 'shared/enums';
+import {EStorageKeys} from 'shared/models/enums/storage.enums';
+import {ELanguages} from 'shared/models/enums/localization.enums';
 import {I18nManager} from 'react-native';
 import {setItem} from 'utils/localStorage';
 import RNRestart from 'react-native-restart';

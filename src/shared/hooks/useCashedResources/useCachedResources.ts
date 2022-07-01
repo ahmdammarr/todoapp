@@ -1,8 +1,8 @@
 import i18n from 'i18n-js';
 import { getItem, setItem } from "utils/localStorage";
-import { EStorageKeys } from "shared/enums/EstorageKeys.enum";
+import { EStorageKeys } from "shared/models/enums/storage.enums";
 import { useState } from "react";
-import { ELanguages } from "shared/enums";
+import { ELanguages } from "shared/models/enums/localization.enums";
 import { I18nManager } from 'react-native'
 
 export const useCachedResources = () => {
