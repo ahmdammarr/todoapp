@@ -8,7 +8,6 @@ export const getItem = async (key: string) => {
 };
 export const setItem = async (key: string, value: string) => {
   const [err, res] = await to(AsyncStorage.setItem(key, value));
-  console.log('err',err)
   return {
     err,
     res,
