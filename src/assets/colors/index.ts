@@ -6,11 +6,13 @@ export const colors = {
       text: "#000",
       background: "#fff",
       tabIcon:tabIconColor,
+      secondaryBackground:'#dee2e6',
     },
     dark: {
       text: "#fff",
       background: "#000",
       tabIcon: tabIconColor,
+      secondaryBackground:'#212529'
     },
   };
   

@@ -1,20 +1,24 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet} from 'react-native';
 import React from 'react';
 import {useQuery} from '@apollo/client';
 import {todosGQL} from '../gql/todos';
+import {ThemedView} from 'shared/components/ThemedView';
+import {TodoList} from '../components/todoList';
+import {scale} from 'utils/scaling';
 
 export const Todos = () => {
   const {data, error, loading} = useQuery(todosGQL);
-  console.log('loading', loading, 'error', error, 'data', data);
+  const todos = data?.todos?.data;
   return (
-    <View style={styles.container}>
-      <Text>TodosScreen</Text>
-    </View>
+    <ThemedView style={styles.container}>
+      <TodoList todos={todos} />
+    </ThemedView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
+    padding: scale(14),
     flex: 1,
   },
 });
