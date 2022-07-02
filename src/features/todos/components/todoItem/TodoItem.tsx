@@ -16,7 +16,7 @@ export const TodoItem = ({status, time, id, todo}: TTodoItemProps) => {
       <View>
         <TodoStatus status={translate('todos.pending')} id={id} />
       </View>
-      <CompleteButton label={translate('todos.complete')} />
+      <CompleteButton label={translate('todos.complete')} todoId={id} />
     </ThemedSecondaryView>
   );
 };
