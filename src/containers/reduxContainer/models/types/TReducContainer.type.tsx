@@ -1,0 +1,1 @@
+export type TReduxContainer = {children: React.ReactNode};
