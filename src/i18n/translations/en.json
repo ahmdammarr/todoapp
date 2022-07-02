@@ -1,6 +1,9 @@
 {
   "settings":{
     "title":"Settings",
+    "theme": {
+      "title": "Night Mood"
+    },
     "languages": {
       "title": "Language",
       "english": "English",
