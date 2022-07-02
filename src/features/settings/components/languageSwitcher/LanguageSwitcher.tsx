@@ -10,15 +10,24 @@ export const LanguageSwitcher = ({
 }: {
   localization: TUseLocalization;
 }) => {
-  const {translate, languages, isCurrentLanguage, changeLanguage} =
-    localization;
+  const {
+    translate,
+    languages,
+    isCurrentLanguage,
+    changeLanguage,
+  } = localization;
+
   const langTitles = {
     [ELanguages.ar]: translate('settings.languages.arabic'),
     [ELanguages.en]: translate('settings.languages.english'),
   };
+
   return (
     <View style={styles.container}>
-      <Title text={translate('settings.languages.title')} />
+      <Title
+        style={{justifyContent: 'flex-start'}}
+        text={translate('settings.languages.title')}
+      />
       <LanguageSelector
         isCurrentLanguage={isCurrentLanguage}
         langTitls={langTitles}
@@ -31,5 +40,4 @@ export const LanguageSwitcher = ({
 
 const styles = StyleSheet.create({
   container: {alignItems: 'flex-start'},
-  title: {fontWeight: '600', marginBottom: 6},
 });

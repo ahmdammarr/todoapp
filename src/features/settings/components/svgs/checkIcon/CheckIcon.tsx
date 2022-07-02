@@ -1,13 +1,13 @@
 import * as React from 'react';
 import {StyleSheet, View} from 'react-native';
-import Svg, {Path} from 'react-native-svg';
+import Svg, {Path, SvgProps} from 'react-native-svg';
 import {useThemed} from 'shared/hooks/useThemed';
 import {TColors} from 'shared/models/types/theme.types';
 
-export const CheckIcon = (props: TColors) => {
+export const CheckIcon = ({style,...props}: TColors& SvgProps) => {
   const fillColor = useThemed({light: props.light, dark: props.dark}, 'text');
   return (
-    <View style={styles.container}>
+    <View style={[styles.container,style]}>
       <Svg
         width={'100%'}
         height={'100%'}

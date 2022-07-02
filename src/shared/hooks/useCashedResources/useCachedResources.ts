@@ -9,7 +9,7 @@ export const useCachedResources = () => {
   const [isLanguageLoading, setIsLanguageLoading] = useState(true);
 
   getItem(EStorageKeys.language).then((language) => {
-    if (language === undefined) {
+    if (!language) {
       setItem(EStorageKeys.language, ELanguages.en);
       i18n.locale = ELanguages.en;
       I18nManager.forceRTL(false);
