@@ -4,11 +4,13 @@ import {TTodoListProps} from './models/types';
 import {ThemedText} from 'shared/components/ThemedText';
 import {TodoItem} from '../todoItem/TodoItem';
 import {EStatus} from 'features/todos/models/enums/ETodo.enums/EStatus.enum';
+import { SCREEN_WIDTH } from 'utils/scaling';
 
 export const TodoList = ({todos}: TTodoListProps) => {
   return (
     <FlatList
       data={todos}
+      contentContainerStyle={styles.container}
       renderItem={({item}) => {
         return (
           <TodoItem
@@ -22,4 +24,8 @@ export const TodoList = ({todos}: TTodoListProps) => {
     />
   );
 };
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container:{
+    width:SCREEN_WIDTH
+  }
+});

@@ -4,11 +4,12 @@ import {StyleSheet,ViewProps} from 'react-native';
 import { AnimatedView } from '../AnimatedView';
 
 
-export const ErrorAnimated = (style: ViewProps['style']) => {
+export const ErrorAnimated = ({style,...props}: ViewProps) => {
   return (
     <AnimatedView
     containerStyle={style}
     animation={animations.errorAnimation}
+    {...props}
   />
   );
 };
