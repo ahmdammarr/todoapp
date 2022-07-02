@@ -9,6 +9,12 @@
       "english": "English",
       "arabic": "العربية"
     }
+   
+  },
+  "todos":{
+    "complete":"اكمال",
+    "pending":"قيد التنفيذ"
   }
+  
 }
 

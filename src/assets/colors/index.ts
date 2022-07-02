@@ -1,5 +1,6 @@
 export const tabIconColor = "#6c757d"
 export const tabIconFocusColor = "#6c757d"
+export const success = "#2a9d8f"
 
 export const colors = {
     light: {

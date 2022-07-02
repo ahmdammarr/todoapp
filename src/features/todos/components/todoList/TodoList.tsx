@@ -15,6 +15,7 @@ export const TodoList = ({todos}: TTodoListProps) => {
         return (
           <TodoItem
             status={EStatus.pending}
+            id={item?.id}
             time="1234"
             todo={item?.attributes?.todo}
           />
@@ -26,6 +27,7 @@ export const TodoList = ({todos}: TTodoListProps) => {
 };
 const styles = StyleSheet.create({
   container:{
-    width:SCREEN_WIDTH
+    //width:SCREEN_WIDTH,
+    justifyContent:"center",
   }
 });
