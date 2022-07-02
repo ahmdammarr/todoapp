@@ -1,6 +1,11 @@
 {
-    "test":{
-      "test":"اختبار"}
-  
+  "settings":{
+    "title":"الضبط",
+    "languages": {
+      "title": "اللغة",
+      "english": "English",
+      "arabic": "العربية"
+    }
+  }
 }
 

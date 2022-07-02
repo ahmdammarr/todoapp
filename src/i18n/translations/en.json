@@ -1,5 +1,11 @@
 {
-  "test":{
-    "test":"test"}
+  "settings":{
+    "title":"Settings",
+    "languages": {
+      "title": "Language",
+      "english": "English",
+      "arabic": "العربية"
+    }
+  }
 }
 

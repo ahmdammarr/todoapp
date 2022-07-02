@@ -1,0 +1,1 @@
+export type {TLanguageSelector} from './TLanguageSwitcher.type'
