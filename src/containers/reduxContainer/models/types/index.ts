@@ -1,1 +1,0 @@
-export type {TReduxContainer} from './TReducContainer.type'
