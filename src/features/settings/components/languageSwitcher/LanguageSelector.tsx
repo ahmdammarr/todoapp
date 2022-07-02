@@ -1,9 +1,10 @@
-import {StyleSheet,View, TouchableOpacity} from 'react-native';
+import {StyleSheet, View, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {ThemedText} from 'shared/components/ThemedText';
 import {CheckIcon} from '../svgs/checkIcon';
 import {TLanguageSelector} from './models/types';
-import { scaleHeight } from 'utils/scaling';
+import {scaleHeight} from 'utils/scaling';
+import {LanguageItem} from './LanguageItem';
 
 export const LanguageSelector = ({
   languages,
@@ -17,26 +18,16 @@ export const LanguageSelector = ({
         const onChnageLang = () => onChangeLanguage(language);
         const isCurrentLang = isCurrentLanguage(language);
         return (
-          <TouchableOpacity
+          <LanguageItem
             key={language}
-            style={styles.languageContainer}
-            onPress={onChnageLang}>
-            <ThemedText style={styles.langItem}>
-              {langTitls[language]}
-            </ThemedText>
-            {isCurrentLang && <CheckIcon style={{marginTop:scaleHeight(10)}}/>}
-          </TouchableOpacity>
+            title={langTitls[language]}
+            isCurrentLang={isCurrentLang}
+            onChangeLanguage={onChnageLang}
+          />
         );
       })}
     </View>
   );
 };
 
-const styles = StyleSheet.create({
-  langItem: {paddingVertical: 4},
-  languageContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    width: '100%',
-  },
-});
+const styles = StyleSheet.create({});
