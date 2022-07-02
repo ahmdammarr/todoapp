@@ -1,5 +1,14 @@
 {
-  "test":{
-    "test":"test"}
+  "settings":{
+    "title":"Settings",
+    "theme": {
+      "title": "Night Mood"
+    },
+    "languages": {
+      "title": "Language",
+      "english": "English",
+      "arabic": "العربية"
+    }
+  }
 }
 

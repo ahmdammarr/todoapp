@@ -4,12 +4,17 @@ import { EStorageKeys } from "shared/models/enums/storage.enums";
 import { useState } from "react";
 import { ELanguages } from "shared/models/enums/localization.enums";
 import { I18nManager } from 'react-native'
+import { setTheme } from 'shared/storeSlices/ThemeSlice';
+import { useAppDispatch } from '../useAppDispatch';
 
 export const useCachedResources = () => {
   const [isLanguageLoading, setIsLanguageLoading] = useState(true);
+  const [isThemeLoading, setIsThemeLoading] = useState(true);
+  const dispatch = useAppDispatch();
 
+  //getLanguage
   getItem(EStorageKeys.language).then((language) => {
-    if (language === undefined) {
+    if (!language) {
       setItem(EStorageKeys.language, ELanguages.en);
       i18n.locale = ELanguages.en;
       I18nManager.forceRTL(false);
@@ -20,7 +25,12 @@ export const useCachedResources = () => {
     }
   });
 
+  //get theme
+  getItem(EStorageKeys.theme).then(({ res }) => {
+    if (res) dispatch(setTheme(res));
+    setIsThemeLoading(false);
+  });
   return {
-    isLoading: isLanguageLoading,
+    isLoading: isLanguageLoading && isThemeLoading,
   };
 };

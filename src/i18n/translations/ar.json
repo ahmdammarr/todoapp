@@ -1,6 +1,14 @@
 {
-    "test":{
-      "test":"اختبار"}
-  
+  "settings":{
+    "title":"الضبط",
+    "theme": {
+      "title": "وضع الليل"
+    },
+    "languages": {
+      "title": "اللغة",
+      "english": "English",
+      "arabic": "العربية"
+    }
+  }
 }
 

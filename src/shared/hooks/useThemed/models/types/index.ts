@@ -1,0 +1,1 @@
+export type {TUseChangeThem} from './TUseChangeTheme.type'

@@ -1,3 +1,4 @@
 export enum EStorageKeys {
-    language = 'language'
+    language = 'language',
+    theme = 'theme'
 }
