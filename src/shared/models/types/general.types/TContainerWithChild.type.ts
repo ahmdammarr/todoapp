@@ -1,0 +1,1 @@
+export type TContainerWithChild = {children: React.ReactNode};

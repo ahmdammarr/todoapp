@@ -1,0 +1,1 @@
+export type {TContainerWithChild} from './TContainerWithChild.type'
