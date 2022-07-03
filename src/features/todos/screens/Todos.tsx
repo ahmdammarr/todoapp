@@ -1,4 +1,4 @@
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet} from 'react-native';
 import React from 'react';
 import {TodoList} from '../components/todoList';
 import {scale, scaleWidth} from 'utils/scaling';
@@ -6,6 +6,7 @@ import {ErrorAnimated} from 'shared/components/ErrorAnimated';
 import {Loader} from 'shared/components/Loader';
 import {useFetchTodos} from '../hooks/useFetchTodos';
 import {EFetchStatus} from '../models/enums/ETodo.enums/EFetchStatus.enum';
+import { ThemedView } from 'shared/components/ThemedView';
 
 export const Todos = () => {
   const {todos, fetchStatus} = useFetchTodos();
@@ -16,7 +17,7 @@ export const Todos = () => {
     [EFetchStatus.done]: <TodoList todos={todos} />,
   };
   return (
-    <View style={styles.container}>{content[fetchStatus]}</View>
+    <ThemedView style={styles.container}>{content[fetchStatus]}</ThemedView>
   );
 };
 

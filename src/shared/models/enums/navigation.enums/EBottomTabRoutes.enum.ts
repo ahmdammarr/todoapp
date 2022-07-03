@@ -1,4 +1,4 @@
 export enum EBottomTabRoutes {
-    todos = 'Todos',
-    settings = 'Settings'
+    todos = 'TodosStack',
+    settings = 'SettingsStack'
 }

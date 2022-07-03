@@ -1,17 +1,16 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {EBottomTabRoutes} from 'shared/models/enums/navigation.enums';
-import {TBottomTabNavigator} from 'shared/models/types/navigation.types/TBottomTabNavigator.type';
 import {Todos} from 'features/todos/screens';
-import {Settings} from 'features/settings/screens';
-import {Text} from 'react-native';
 import {SettingsIcon} from 'shared/components/svgs/settingsIcon';
 import {useThemed} from 'shared/hooks/useThemed';
 import {TColors} from 'shared/models/types/theme.types';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import { TodosIcon } from 'shared/components/svgs/todosIcon';
+import { SettingsStackScreens } from 'features/settings';
+import { TodosStackScreens } from 'features/todos';
 
-const BottomTab = createBottomTabNavigator<TBottomTabNavigator>();
+const BottomTab = createBottomTabNavigator();
 
 export const BottomTabNavigator = ({dark, light}: TColors) => {
   const {top} = useSafeAreaInsets();
@@ -41,14 +40,14 @@ export const BottomTabNavigator = ({dark, light}: TColors) => {
           tabBarIcon: ({focused}) => <TodosIcon isFocused={focused} />,
         }}
         name={EBottomTabRoutes.todos}
-        component={Todos}
+        component={TodosStackScreens}
       />
       <BottomTab.Screen
         options={{
           tabBarIcon: ({focused}) => <SettingsIcon isFocused={focused} />,
         }}
         name={EBottomTabRoutes.settings}
-        component={Settings}
+        component={SettingsStackScreens}
       />
     </BottomTab.Navigator>
   );
