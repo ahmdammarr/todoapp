@@ -6,20 +6,23 @@ import {EStatus} from 'features/todos/models/enums/ETodo.enums/EStatus.enum';
 import {UseCompleteTodo} from 'features/todos/hooks/useUpdateTodos/UseCompleteTodo';
 
 export const TodoList = ({todos}: TTodoListProps) => {
-  const {completeTodo, loading, error} = UseCompleteTodo();
+  const {completeTodo, selectedTodId, loading, error} = UseCompleteTodo();
   return (
     <FlatList
       data={todos}
       contentContainerStyle={styles.container}
       renderItem={({item}) => {
         const {id, created_at, todo} = item;
-        const onComplete =()=> completeTodo(id);
+        const onComplete = () => completeTodo(id);
+        const isSelectedItem = selectedTodId === id;
+        const isLoading = loading && isSelectedItem;
+        const isError = error && isSelectedItem;
         return (
           <TodoItem
             time={created_at}
             todo={todo}
-            loading={loading}
-            error={error}
+            loading={isLoading}
+            error={isError}
             onItemPressed={onComplete}
           />
         );
