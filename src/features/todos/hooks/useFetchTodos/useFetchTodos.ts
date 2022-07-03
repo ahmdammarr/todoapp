@@ -10,9 +10,9 @@ export const useFetchTodos = () => {
         if (error) setFetchStatus(EFetchStatus.error)
         if (data) setFetchStatus(EFetchStatus.done)
     }, [error, data])
-
     return {
         fetchStatus,
+        loading,
         todos: data?.todos
     }
 }

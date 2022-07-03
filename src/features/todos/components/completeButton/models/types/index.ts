@@ -1,1 +1,1 @@
-export type {TCompleteButtonProps} from './TCompleteButtonProps.type'
+export type {TActionButtonProps} from './TActionButtonProps.type'

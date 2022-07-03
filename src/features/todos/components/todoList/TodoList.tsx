@@ -1,12 +1,12 @@
 import {FlatList, StyleSheet} from 'react-native';
 import React from 'react';
 import {TTodoListProps} from './models/types';
-import {ThemedText} from 'shared/components/ThemedText';
 import {TodoItem} from '../todoItem/TodoItem';
 import {EStatus} from 'features/todos/models/enums/ETodo.enums/EStatus.enum';
-import { SCREEN_WIDTH } from 'utils/scaling';
+import {UseCompleteTodo} from 'features/todos/hooks/useUpdateTodos/UseCompleteTodo';
 
 export const TodoList = ({todos}: TTodoListProps) => {
+  const {completeTodo, loading, error} = UseCompleteTodo();
   return (
     <FlatList
       data={todos}
@@ -15,9 +15,11 @@ export const TodoList = ({todos}: TTodoListProps) => {
         return (
           <TodoItem
             status={EStatus.pending}
-            id={item?.id}
             time="1234"
             todo={item?.todo}
+            loading={loading}
+            error={error}
+            onItemPressed={() => ''}
           />
         );
       }}
@@ -26,8 +28,8 @@ export const TodoList = ({todos}: TTodoListProps) => {
   );
 };
 const styles = StyleSheet.create({
-  container:{
+  container: {
     //width:SCREEN_WIDTH,
-    justifyContent:"center",
-  }
+    justifyContent: 'center',
+  },
 });
