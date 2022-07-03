@@ -11,8 +11,12 @@ export const Todos = () => {
   const {todos, fetchStatus} = useFetchTodos();
 
   const content: {[key: string]: React.ReactElement} = {
-    [EFetchStatus.error]: <ErrorAnimated style={styles.error} />,
-    [EFetchStatus.loading]: <Loader style={styles.loader} />,
+    [EFetchStatus.error]: <ErrorAnimated
+    testID='errorUi'
+    style={styles.error} />,
+    [EFetchStatus.loading]: <Loader 
+    testID='loader'
+    style={styles.loader} />,
     [EFetchStatus.done]: <TodoList todos={todos} />,
   };
   return (

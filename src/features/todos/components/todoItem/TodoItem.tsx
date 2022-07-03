@@ -21,7 +21,9 @@ export const TodoItem = ({
   const {translate} = useLocalization();
   const formatedTime = format(parseISO(time as string), 'dd/MM/yyyy');
   return (
-    <ThemedSecondaryView style={styles.container}>
+    <ThemedSecondaryView 
+    testID='todoItem'
+    style={styles.container}>
       <Title text={todo} />
       <TodoInfo status={translate('todos.pending')} time={formatedTime} />
       <ActionButton
