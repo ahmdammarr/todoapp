@@ -15,7 +15,8 @@ export const Settings = () => {
   return (
     <ThemedView style={styles.container}>
       <Title text={translate('settings.title')} style={styles.title} />
-      <ThemeSwitcher theme={theme} translate={localization['translate']} />
+      <ThemeSwitcher 
+      theme={theme} translate={localization['translate']} />
       <LanguageSwitcher localization={localization} />
     </ThemedView>
   );
