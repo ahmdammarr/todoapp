@@ -1,6 +1,5 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import React from 'react';
-import {ThemedView} from 'shared/components/ThemedView';
 import {TodoList} from '../components/todoList';
 import {scale, scaleWidth} from 'utils/scaling';
 import {ErrorAnimated} from 'shared/components/ErrorAnimated';
@@ -17,7 +16,7 @@ export const Todos = () => {
     [EFetchStatus.done]: <TodoList todos={todos} />,
   };
   return (
-    <ThemedView style={styles.container}>{content[fetchStatus]}</ThemedView>
+    <View style={styles.container}>{content[fetchStatus]}</View>
   );
 };
 
