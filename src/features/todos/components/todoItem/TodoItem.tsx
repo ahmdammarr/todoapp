@@ -10,21 +10,24 @@ import {useLocalization} from 'shared/hooks/useLocalization';
 import {EButtonVariants} from '../completeButton/models/enums';
 
 export const TodoItem = ({
-  status,
   time,
   todo,
   onItemPressed,
+  error,
+  loading
 }: TTodoItemProps) => {
   const {translate} = useLocalization();
 
   return (
     <ThemedSecondaryView style={styles.container}>
       <Title text={todo} />
-      <TodoInfo status={status} time={time} />
+      <TodoInfo status={translate('todos.pending')} time={time} />
       <ActionButton
         label={translate('todos.complete')}
         style={styles.complete}
         variant={EButtonVariants.primary}
+        loading={loading}
+        error={error}
         onPress={onItemPressed}
       />
     </ThemedSecondaryView>

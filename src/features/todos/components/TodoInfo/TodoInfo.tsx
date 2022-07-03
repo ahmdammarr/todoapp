@@ -17,6 +17,7 @@ export const TodoInfo = ({status, time}: TodoInfoProps) => {
 const styles = StyleSheet.create({
   container: {
     marginTop: scaleHeight(6),
+    justifyContent:'flex-start'
   },
   status: {
     opacity: 0.5,

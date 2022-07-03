@@ -16,7 +16,6 @@ export const TodoList = ({todos}: TTodoListProps) => {
         const onComplete =()=> completeTodo(id);
         return (
           <TodoItem
-            status={EStatus.pending}
             time={created_at}
             todo={todo}
             loading={loading}
