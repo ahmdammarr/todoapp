@@ -1,7 +1,8 @@
+import {EStatus} from '../../enums/ETodo.enums/EStatus.enum';
+
 export type TTodo = {
-    id: string
-    attributes: {
-        time: Date
-        todo: string
-    }
-}
+  id: string;
+  todo: string;
+  status: EStatus;
+  created_at: Date;
+};

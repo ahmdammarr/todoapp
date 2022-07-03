@@ -4,12 +4,13 @@ import { EFetchStatus } from "features/todos/models/enums/ETodo.enums/EFetchStat
 import { useState, useEffect } from "react"
 
 export const useFetchTodos = () => {
-    const { error, data } = useQuery(todosGQL)
+    const { error, data, loading } = useQuery(todosGQL)
     const [fetchStatus, setFetchStatus] = useState(EFetchStatus.loading)
     useEffect(() => {
         if (error) setFetchStatus(EFetchStatus.error)
         if (data) setFetchStatus(EFetchStatus.done)
     }, [error, data])
+console.log('loading',loading);
 
     return {
         fetchStatus,

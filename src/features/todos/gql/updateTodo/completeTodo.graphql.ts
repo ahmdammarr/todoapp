@@ -1,15 +1,13 @@
-import { gql } from '@apollo/client'
+import {gql} from '@apollo/client';
 
 export const completeTodQgl = gql`
-mutation($id:ID!){
-    updateTodo(id: $id, data: { status:  Completed }){
-    data{
-      id
-      attributes{
+  mutation {
+    updateTodo(input: {data: {status: Completed}}) {
+      todo {
+        id
         todo
         status
       }
     }
-    }
   }
-`
+`;

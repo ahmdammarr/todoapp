@@ -8,13 +8,14 @@ import { useState, useEffect } from "react"
 export const UseCreateTodo = () => {
     const [createTodoMutation, { loading, error }] = useMutation(createTodQgl);
 
-    console.log('mutationError', error)
+   
     const createTodo = (id: string) => createTodoMutation({
         variables: { todo: 'todo from client' }
     })
 
     return {
         loading,
+        error,
         createTodo
     }
 }

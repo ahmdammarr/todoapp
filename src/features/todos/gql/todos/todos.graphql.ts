@@ -3,14 +3,10 @@ import { gql } from '@apollo/client'
 export const todosGQL = gql`
 {
   todos{
-    data{
-      id
-      attributes{
-      createdAt
-        todo
-        status
-      }
-    }
+    id
+    todo
+    status
+    created_at
   }
-  }
+}
 `

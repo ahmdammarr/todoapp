@@ -14,6 +14,7 @@ export const UseCompleteTodo = () => {
 
     return {
         loading,
+        error,
         completeTodo
     }
 }
