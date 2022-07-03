@@ -1,5 +1,5 @@
 # todoapp
 
-Use url in .env.example 
+Graphql server endpoint is provided in .env.example
 
 
