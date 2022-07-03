@@ -9,6 +9,12 @@
       "english": "English",
       "arabic": "العربية"
     }
+  },
+  "todos":{
+    "complete":"Complete",
+    "pending":"pending",
+    "add":"add",
+    "newTodo":"Add new todo"
   }
 }
 

@@ -2,14 +2,11 @@ import { gql } from '@apollo/client'
 
 export const todosGQL = gql`
 {
-    todos{
-      data{
-        id
-        attributes{
-          time
-          todo
-        }
-      }
-    }
+  todos(where:{status:"Pending"} sort: "created_at:desc"){
+    id
+    todo
+    status
+    created_at
   }
+}
 `

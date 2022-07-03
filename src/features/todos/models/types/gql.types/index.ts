@@ -1,0 +1,1 @@
+export type {TTodo} from './TTodo.type'

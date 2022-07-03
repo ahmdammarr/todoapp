@@ -1,4 +1,4 @@
-import {tabIconFocusColor} from 'assets/colors';
+import {success} from 'assets/colors';
 import * as React from 'react';
 import {StyleSheet, View} from 'react-native';
 import Svg, {Path} from 'react-native-svg';
@@ -12,7 +12,7 @@ export const SettingsIcon = (props: TTabIcons) => {
     'tabIcon',
   );
 
-  const focousedFill = props.isFocused ? tabIconFocusColor : 'transparent';
+  const focousedFill = props.isFocused ? success : fillColor;
   return (
     <View style={[styles.container,props.style]}>
       <Svg

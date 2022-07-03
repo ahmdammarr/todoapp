@@ -1,0 +1,1 @@
+export { completeTodQgl } from './completeTodo.graphql'

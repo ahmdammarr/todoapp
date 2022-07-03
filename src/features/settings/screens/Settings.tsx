@@ -6,18 +6,17 @@ import {useLocalization} from 'shared/hooks/useLocalization';
 import {scale, scaleHeight} from 'utils/scaling';
 import {ThemeSwitcher} from '../components/themeSwitcher';
 import {useChangeTheme} from 'shared/hooks/useThemed';
-import { ThemedView } from 'shared/components/ThemedView';
 
 export const Settings = () => {
   const localization = useLocalization();
   const theme = useChangeTheme();
   const {translate} = localization;
   return (
-    <ThemedView style={styles.container}>
+    <View style={styles.container}>
       <Title text={translate('settings.title')} style={styles.title} />
       <ThemeSwitcher theme={theme} translate={localization['translate']} />
       <LanguageSwitcher localization={localization} />
-    </ThemedView>
+    </View>
   );
 };
 

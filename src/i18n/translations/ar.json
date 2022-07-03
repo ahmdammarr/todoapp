@@ -9,6 +9,14 @@
       "english": "English",
       "arabic": "العربية"
     }
+   
+  },
+  "todos":{
+    "complete":"اكمال",
+    "pending":"قيد التنفيذ",
+    "add":"إضافة",
+    "newTodo":"إضف مهمة جديدة"
   }
+  
 }
 
