@@ -2,20 +2,13 @@ import {StyleSheet, View} from 'react-native';
 import React, { useState } from 'react';
 import {TextInputArea} from 'shared/components/TextInputArea';
 import {scale, scaleHeight, scaleWidth, SCREEN_WIDTH} from 'utils/scaling';
-import {TColors} from 'shared/models/types/theme.types';
-import {useThemed} from 'shared/hooks/useThemed';
 import {ActionButton} from 'shared/components/ActionButton';
 import {EButtonVariants} from 'shared/components/ActionButton/models/enums';
 import { UseCreateTodo } from 'features/todos/hooks/useCreateTodos/useCreateTodo';
 import { useLocalization } from 'shared/hooks/useLocalization';
 
-export const AddTodoInput = ({dark, light}: TColors) => {
-  const themedColor = useThemed({dark, light}, 'secondaryBackground');
-  const color = useThemed({dark, light}, 'text');
-  const themed = {
-    borderColor: themedColor,
-    color,
-  };
+export const AddTodoInput = () => {
+
   const {translate} = useLocalization()
   const {createTodo,loading,error } = UseCreateTodo()
    const[todoText, setTodoText] = useState('') 
@@ -29,8 +22,7 @@ export const AddTodoInput = ({dark, light}: TColors) => {
       <TextInputArea
         onChangeText={setTodoText}
         placeholder={translate('todos.newTodo')}
-        placeholderTextColor={themedColor}
-        style={[styles.input, themed]}
+        style={styles.input}
       />
       <ActionButton
         style={styles.add}
@@ -56,6 +48,7 @@ const styles = StyleSheet.create({
     height: scaleHeight(90),
     borderWidth: scaleWidth(1),
     borderRadius: scale(8),
+    padding: scale(10),
     marginBottom: scaleHeight(20),
     width: '70%',
   },
