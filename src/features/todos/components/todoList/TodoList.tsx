@@ -12,14 +12,16 @@ export const TodoList = ({todos}: TTodoListProps) => {
       data={todos}
       contentContainerStyle={styles.container}
       renderItem={({item}) => {
+        const {id, created_at, todo} = item;
+        const onComplete =()=> completeTodo(id);
         return (
           <TodoItem
             status={EStatus.pending}
-            time="1234"
-            todo={item?.todo}
+            time={created_at}
+            todo={todo}
             loading={loading}
             error={error}
-            onItemPressed={() => ''}
+            onItemPressed={onComplete}
           />
         );
       }}

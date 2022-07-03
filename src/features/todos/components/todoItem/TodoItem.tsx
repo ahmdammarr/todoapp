@@ -1,8 +1,8 @@
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet} from 'react-native';
 import React from 'react';
 import {TTodoItemProps} from './models/types';
 import {ThemedSecondaryView} from 'shared/components/ThemedSecondaryView';
-import {scale, scaleHeight, scaleWidth, SCREEN_WIDTH} from 'utils/scaling';
+import {scale, scaleHeight, SCREEN_WIDTH} from 'utils/scaling';
 import {Title} from 'shared/components/Title';
 import {TodoInfo} from '../TodoInfo';
 import {ActionButton} from '../completeButton';
@@ -16,10 +16,11 @@ export const TodoItem = ({
   onItemPressed,
 }: TTodoItemProps) => {
   const {translate} = useLocalization();
+
   return (
     <ThemedSecondaryView style={styles.container}>
       <Title text={todo} />
-      <TodoInfo status={status} time={'1234'} />
+      <TodoInfo status={status} time={time} />
       <ActionButton
         label={translate('todos.complete')}
         style={styles.complete}
