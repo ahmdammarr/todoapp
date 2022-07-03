@@ -7,8 +7,6 @@ import {AddTodoInput} from '../addTodoInput';
 import {EmptyTodos} from '../emptyTodos';
 
 export const TodoList = ({todos}: TTodoListProps) => {
-  console.log('todosss',todos);
-  
   const {completeTodo, selectedTodId, loading, error} = UseCompleteTodo();
   return (
     <FlatList
