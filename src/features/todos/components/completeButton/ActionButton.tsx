@@ -35,11 +35,11 @@ export const ActionButton = ({
 
 const styles = StyleSheet.create({
   button: {
-    padding: scale(10),
+
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: success,
-    marginTop: scaleHeight(20),
+ 
   },
   buttonContent: {
     flexDirection: 'row',

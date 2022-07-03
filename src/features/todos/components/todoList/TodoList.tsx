@@ -4,6 +4,7 @@ import {TTodoListProps} from './models/types';
 import {TodoItem} from '../todoItem/TodoItem';
 import {EStatus} from 'features/todos/models/enums/ETodo.enums/EStatus.enum';
 import {UseCompleteTodo} from 'features/todos/hooks/useUpdateTodos/UseCompleteTodo';
+import { AddTodoInput } from '../addTodoInput';
 
 export const TodoList = ({todos}: TTodoListProps) => {
   const {completeTodo, selectedTodId, loading, error} = UseCompleteTodo();
@@ -11,6 +12,7 @@ export const TodoList = ({todos}: TTodoListProps) => {
     <FlatList
       data={todos}
       contentContainerStyle={styles.container}
+      ListHeaderComponent={<AddTodoInput/>}
       renderItem={({item}) => {
         const {id, created_at, todo} = item;
         const onComplete = () => completeTodo(id);

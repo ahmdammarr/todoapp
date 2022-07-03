@@ -1,16 +1,13 @@
-import { useMutation, useQuery } from "@apollo/client"
+import { useMutation } from "@apollo/client"
 import { createTodQgl } from "features/todos/gql/createTodo/completeTodo.graphql"
 import { todosGQL } from "features/todos/gql/todos"
-import { completeTodQgl } from "features/todos/gql/updateTodo"
-import { EFetchStatus } from "features/todos/models/enums/ETodo.enums/EFetchStatus.enum"
-import { useState, useEffect } from "react"
-
 export const UseCreateTodo = () => {
     const [createTodoMutation, { loading, error }] = useMutation(createTodQgl);
 
    
-    const createTodo = (id: string) => createTodoMutation({
-        variables: { todo: 'todo from client' }
+    const createTodo = (todo: string) => createTodoMutation({
+        variables: { todo },
+        refetchQueries:[todosGQL]
     })
 
     return {
