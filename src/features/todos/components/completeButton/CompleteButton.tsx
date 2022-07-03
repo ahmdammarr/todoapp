@@ -5,10 +5,12 @@ import {colors, success} from 'assets/colors';
 import {TCompleteButtonProps} from './models/types';
 import {UseCompleteTodo} from 'features/todos/hooks/useUpdateTodos/UseCompleteTodo';
 import {Loader} from 'shared/components/Loader';
+import { UseCreateTodo } from 'features/todos/hooks/useCreateTodos/useCreateTodo';
 
 export const CompleteButton = ({label, todoId}: TCompleteButtonProps) => {
   const {completeTodo, loading} = UseCompleteTodo();
-  const onCompletePressed = () => completeTodo(todoId);
+  const {createTodo} = UseCreateTodo()
+  const onCompletePressed = () => createTodo('') //completeTodo(todoId);
   return (
     <TouchableOpacity style={styles.button} onPress={onCompletePressed}>
       <View style={styles.buttonContent}>
