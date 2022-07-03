@@ -1,5 +1,6 @@
 export const animations = {
   errorAnimation:  require('./error.json'),
   loadingAnimation:  require('./loading.json'),
-  emptyTodos: require('./emptyTodos.json')
+  emptyTodos: require('./emptyTodos.json'),
+  logoAnimation:require('./logo.json')
 }
