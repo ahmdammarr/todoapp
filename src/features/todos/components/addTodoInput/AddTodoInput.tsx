@@ -46,6 +46,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'flex-start',
     width: SCREEN_WIDTH,
+    marginTop:scaleHeight(20),
+    height: scaleHeight(100),
   },
   input: {
     height: scaleHeight(90),

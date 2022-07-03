@@ -2,9 +2,9 @@ import {FlatList, StyleSheet} from 'react-native';
 import React from 'react';
 import {TTodoListProps} from './models/types';
 import {TodoItem} from '../todoItem/TodoItem';
-import {EStatus} from 'features/todos/models/enums/ETodo.enums/EStatus.enum';
 import {UseCompleteTodo} from 'features/todos/hooks/useUpdateTodos/UseCompleteTodo';
-import { AddTodoInput } from '../addTodoInput';
+import {AddTodoInput} from '../addTodoInput';
+import {EmptyTodos} from '../emptyTodos';
 
 export const TodoList = ({todos}: TTodoListProps) => {
   const {completeTodo, selectedTodId, loading, error} = UseCompleteTodo();
@@ -12,7 +12,8 @@ export const TodoList = ({todos}: TTodoListProps) => {
     <FlatList
       data={todos}
       contentContainerStyle={styles.container}
-      ListHeaderComponent={<AddTodoInput/>}
+      ListHeaderComponent={<AddTodoInput />}
+      ListEmptyComponent={<EmptyTodos />}
       renderItem={({item}) => {
         const {id, created_at, todo} = item;
         const onComplete = () => completeTodo(id);
