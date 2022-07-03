@@ -5,9 +5,9 @@ import {ThemedSecondaryView} from 'shared/components/ThemedSecondaryView';
 import {scale, scaleHeight, SCREEN_WIDTH} from 'utils/scaling';
 import {Title} from 'shared/components/Title';
 import {TodoInfo} from '../TodoInfo';
-import {ActionButton} from '../completeButton';
+import {ActionButton} from 'shared/components/ActionButton';
 import {useLocalization} from 'shared/hooks/useLocalization';
-import {EButtonVariants} from '../completeButton/models/enums';
+import {EButtonVariants} from 'shared/components/ActionButton/models/enums';
 import {format} from 'date-fns';
 import {parseISO} from 'date-fns/esm';
 

@@ -4,8 +4,8 @@ import {TextInputArea} from 'shared/components/TextInputArea';
 import {scale, scaleHeight, scaleWidth, SCREEN_WIDTH} from 'utils/scaling';
 import {TColors} from 'shared/models/types/theme.types';
 import {useThemed} from 'shared/hooks/useThemed';
-import {ActionButton} from '../completeButton';
-import {EButtonVariants} from '../completeButton/models/enums';
+import {ActionButton} from 'shared/components/ActionButton';
+import {EButtonVariants} from 'shared/components/ActionButton/models/enums';
 import { UseCreateTodo } from 'features/todos/hooks/useCreateTodos/useCreateTodo';
 
 export const AddTodoInput = ({dark, light}: TColors) => {
@@ -25,7 +25,7 @@ export const AddTodoInput = ({dark, light}: TColors) => {
   return (
     <View style={styles.container}>
       <TextInputArea
-      onChangeText={setTodoText}
+        onChangeText={setTodoText}
         placeholderTextColor={themedColor}
         style={[styles.input, themed]}
       />
