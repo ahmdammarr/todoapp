@@ -9,6 +9,7 @@ import {SettingsIcon} from 'shared/components/svgs/settingsIcon';
 import {useThemed} from 'shared/hooks/useThemed';
 import {TColors} from 'shared/models/types/theme.types';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import { TodosIcon } from 'shared/components/svgs/todosIcon';
 
 const BottomTab = createBottomTabNavigator<TBottomTabNavigator>();
 
@@ -37,7 +38,7 @@ export const BottomTabNavigator = ({dark, light}: TColors) => {
       sceneContainerStyle={screenContainerStyle}>
       <BottomTab.Screen
         options={{
-          tabBarIcon: ({focused}) => <SettingsIcon isFocused={focused} />,
+          tabBarIcon: ({focused}) => <TodosIcon isFocused={focused} />,
         }}
         name={EBottomTabRoutes.todos}
         component={Todos}
