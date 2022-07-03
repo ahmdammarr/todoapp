@@ -12,7 +12,7 @@ export const SettingsIcon = (props: TTabIcons) => {
     'tabIcon',
   );
 
-  const focousedFill = props.isFocused ? tabIconFocusColor : 'transparent';
+  const focousedFill = props.isFocused ? tabIconFocusColor : fillColor;
   return (
     <View style={[styles.container,props.style]}>
       <Svg
