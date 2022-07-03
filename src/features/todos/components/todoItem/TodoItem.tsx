@@ -19,7 +19,7 @@ export const TodoItem = ({
   loading,
 }: TTodoItemProps) => {
   const {translate} = useLocalization();
-  const formatedTime = format(parseISO(time as string), 'dd/mm/yyyy');
+  const formatedTime = format(parseISO(time as string), 'dd/MM/yyyy');
   return (
     <ThemedSecondaryView style={styles.container}>
       <Title text={todo} />
