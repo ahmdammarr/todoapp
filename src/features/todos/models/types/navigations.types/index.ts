@@ -1,0 +1,1 @@
+export type {TTodosRoutes} from './TTodosRoutes.type'

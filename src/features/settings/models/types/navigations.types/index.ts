@@ -1,0 +1,1 @@
+export type {TSettingsRoutes} from './TSettingsRoutes.type'
