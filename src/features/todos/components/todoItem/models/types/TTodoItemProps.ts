@@ -1,7 +1,7 @@
 
 export type TTodoItemProps ={
     todo:string
-    time:Date
+    time: Date | string
     onItemPressed:()=>void
     loading?:boolean
     error?:boolean

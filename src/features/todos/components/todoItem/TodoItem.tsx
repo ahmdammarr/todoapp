@@ -8,20 +8,22 @@ import {TodoInfo} from '../TodoInfo';
 import {ActionButton} from '../completeButton';
 import {useLocalization} from 'shared/hooks/useLocalization';
 import {EButtonVariants} from '../completeButton/models/enums';
+import {format} from 'date-fns';
+import {parseISO} from 'date-fns/esm';
 
 export const TodoItem = ({
   time,
   todo,
   onItemPressed,
   error,
-  loading
+  loading,
 }: TTodoItemProps) => {
   const {translate} = useLocalization();
-
+  const formatedTime = format(parseISO(time as string), 'dd/mm/yyyy');
   return (
     <ThemedSecondaryView style={styles.container}>
       <Title text={todo} />
-      <TodoInfo status={translate('todos.pending')} time={time} />
+      <TodoInfo status={translate('todos.pending')} time={formatedTime} />
       <ActionButton
         label={translate('todos.complete')}
         style={styles.complete}

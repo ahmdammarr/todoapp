@@ -18,6 +18,7 @@
     "@react-navigation/stack": "^6.2.1",
     "@reduxjs/toolkit": "^1.8.3",
     "await-to-js": "^3.0.0",
+    "date-fns": "^2.28.0",
     "graphql": "^16.5.0",
     "i18n-js": "^3.9.2",
     "install": "^0.13.0",
