@@ -9,7 +9,9 @@ export const ThemeSwitcher = ({translate, theme}: TThemeSwitcher) => {
   const {changeTheme, isDarkTheme} = theme;
   const onSwitch = () => changeTheme();
   return (
-    <View style={styles.container}>
+    <View 
+    testID='themeSwitcher'
+    style={styles.container}>
       <Title text={translate('settings.theme.title')} />
       <Switch value={isDarkTheme} onChange={onSwitch} thumbColor={'greens'} />
     </View>
