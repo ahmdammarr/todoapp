@@ -2,7 +2,7 @@ import {StyleSheet, View} from 'react-native';
 import React from 'react';
 import {TTodoItemProps} from './models/types';
 import {ThemedSecondaryView} from 'shared/components/ThemedSecondaryView';
-import {scale, SCREEN_WIDTH} from 'utils/scaling';
+import {scale, scaleHeight, scaleWidth, SCREEN_WIDTH} from 'utils/scaling';
 import {Title} from 'shared/components/Title';
 import {TodoStatus} from '../todoStatus';
 import {CompleteButton} from '../completeButton';
@@ -28,5 +28,6 @@ const styles = StyleSheet.create({
     borderRadius: scale(8),
     justifyContent: 'space-between',
     alignItems: 'flex-start',
+    marginBottom: scaleHeight(20),
   },
 });

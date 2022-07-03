@@ -17,7 +17,7 @@ export const TodoList = ({todos}: TTodoListProps) => {
             status={EStatus.pending}
             id={item?.id}
             time="1234"
-            todo={item?.attributes?.todo}
+            todo={item?.todo}
           />
         );
       }}
