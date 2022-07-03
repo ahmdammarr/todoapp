@@ -36,7 +36,6 @@ export const TodoList = ({todos}: TTodoListProps) => {
 };
 const styles = StyleSheet.create({
   container: {
-    //width:SCREEN_WIDTH,
     justifyContent: 'center',
   },
 });

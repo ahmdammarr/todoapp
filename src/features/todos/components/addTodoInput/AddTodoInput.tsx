@@ -7,6 +7,7 @@ import {useThemed} from 'shared/hooks/useThemed';
 import {ActionButton} from 'shared/components/ActionButton';
 import {EButtonVariants} from 'shared/components/ActionButton/models/enums';
 import { UseCreateTodo } from 'features/todos/hooks/useCreateTodos/useCreateTodo';
+import { useLocalization } from 'shared/hooks/useLocalization';
 
 export const AddTodoInput = ({dark, light}: TColors) => {
   const themedColor = useThemed({dark, light}, 'secondaryBackground');
@@ -15,6 +16,7 @@ export const AddTodoInput = ({dark, light}: TColors) => {
     borderColor: themedColor,
     color,
   };
+  const {translate} = useLocalization()
   const {createTodo,loading,error } = UseCreateTodo()
    const[todoText, setTodoText] = useState('') 
 
@@ -26,12 +28,13 @@ export const AddTodoInput = ({dark, light}: TColors) => {
     <View style={styles.container}>
       <TextInputArea
         onChangeText={setTodoText}
+        placeholder={translate('todos.newTodo')}
         placeholderTextColor={themedColor}
         style={[styles.input, themed]}
       />
       <ActionButton
         style={styles.add}
-        label="add"
+        label={translate('todos.add')}
         variant={EButtonVariants.primary}
         loading={loading}
         error={error}

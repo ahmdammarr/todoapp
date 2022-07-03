@@ -12,7 +12,9 @@
   },
   "todos":{
     "complete":"Complete",
-    "pending":"pending"
+    "pending":"pending",
+    "add":"add",
+    "newTodo":"Add new todo"
   }
 }
 
