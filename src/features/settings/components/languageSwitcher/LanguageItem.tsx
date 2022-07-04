@@ -23,7 +23,7 @@ const LanguageItem = ({
 export {LanguageItem};
 
 const styles = StyleSheet.create({
-  langItem: {paddingVertical: 4},
+  langItem: {paddingVertical: scaleHeight(4)},
   languageContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',

@@ -1,9 +1,6 @@
-import {StyleSheet, View, TouchableOpacity} from 'react-native';
+import {View} from 'react-native';
 import React from 'react';
-import {ThemedText} from 'shared/components/ThemedText';
-import {CheckIcon} from '../svgs/checkIcon';
 import {TLanguageSelector} from './models/types';
-import {scaleHeight} from 'utils/scaling';
 import {LanguageItem} from './LanguageItem';
 
 export const LanguageSelector = ({
@@ -29,5 +26,3 @@ export const LanguageSelector = ({
     </View>
   );
 };
-
-const styles = StyleSheet.create({});

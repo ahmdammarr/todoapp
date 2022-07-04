@@ -13,6 +13,4 @@ export const Loader = ({style, ...props}: ViewProps) => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {},
-});
+

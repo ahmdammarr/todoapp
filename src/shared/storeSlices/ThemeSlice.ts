@@ -1,10 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit"
-import {useColorScheme } from 'react-native';
 import { EStores } from "shared/models/enums/store.enums";
 import { TRootState } from "shared/models/types/store.types";
 import { useAppSelector } from "shared/hooks/useAppSelector";
 
-const defaultMood = ''//useColorScheme()
+const defaultMood = ''
 export const themeSlice = createSlice({
   name: EStores.theme,
   initialState: defaultMood ,

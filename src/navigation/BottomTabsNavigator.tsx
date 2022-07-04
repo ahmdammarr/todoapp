@@ -1,7 +1,6 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {EBottomTabRoutes} from 'shared/models/enums/navigation.enums';
-import {Todos} from 'features/todos/screens';
 import {SettingsIcon} from 'shared/components/svgs/settingsIcon';
 import {useThemed} from 'shared/hooks/useThemed';
 import {TColors} from 'shared/models/types/theme.types';
