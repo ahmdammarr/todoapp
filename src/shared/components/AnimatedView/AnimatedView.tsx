@@ -1,6 +1,6 @@
 import LottieView from "lottie-react-native";
 import * as React from "react";
-import {  StyleSheet, View } from "react-native";
+import {  StyleSheet } from "react-native";
 import { TAnimatedView } from "shared/models/types/animations.types";
 import { ThemedView } from "../ThemedView";
 

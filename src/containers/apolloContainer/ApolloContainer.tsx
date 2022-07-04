@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {TContainerWithChild} from 'shared/models/types/general.types';
-import {ApolloClient, InMemoryCache, ApolloProvider, gql} from '@apollo/client';
+import {ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client';
 import {API_SERVER} from '@env';
 
 export const ApolloContainer = ({children}: TContainerWithChild) => {
